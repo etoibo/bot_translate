@@ -31,7 +31,7 @@ async def send_welcome(message: types.Message):
 		
 
 	
-admin = 1897543866
+admin = 'USER_ID_YOU'
 
 @dp.message_handler(commands=['alluser'],user_id= admin)
 async def send_welcome(message: types.Message):
