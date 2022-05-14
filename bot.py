@@ -24,16 +24,16 @@ async def send_welcome(message: types.Message):
 	data3 = skl.id_user(idi)
 	if data3 is None:
 		skl.qoshish(idi,username,firstname)
-		await message.reply(f"salom!, привет!, hello! \nRo'yxatan o'tingiz!:  \nIsm: {firstname} User: @{username}\nidi: {idi} \nSoz kiriting:\nОтправьте текст:\nSend text:")
+		await message.reply(f"salom!, привет!, hello! \nSoz kiriting:\nОтправьте текст:\nSend text:")
 
 	else:
 		await message.reply("Ro'yxatan o'tgansiz so'z yuboring!:\nОтправьте текст:\nSend text:")
 		
 
 	
+admin = 1897543866
 
-
-@dp.message_handler(commands=['alluser'])
+@dp.message_handler(commands=['alluser'],user_id= admin)
 async def send_welcome(message: types.Message):
 	idi = message.from_user.id
 	data2 = skl.aluser(idi)
